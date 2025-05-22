@@ -19,6 +19,7 @@ use App\Http\Controllers\RolController;
 use App\Http\Controllers\PrivilegioController;
 use App\Http\Controllers\BoletaPagoController;
 use App\Http\Controllers\BusquedaController;
+use App\Http\Controllers\AuthController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -53,3 +54,4 @@ Route::apiResource('puestos', PuestoController::class);
 Route::get('/empresa', [EmpresaController::class, 'index']);
 Route::post('/empresa', [EmpresaController::class, 'update']);
 Route::apiResource('usuarios', UsuarioController::class);
+Route::post('/signIn', [AuthController::class, 'losignIngin']);
